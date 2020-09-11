@@ -5,6 +5,7 @@ var port = process.env.PORT || 9999;// port apply
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var w2vRouter = require("./routers/w2v");
+var cors = require('cors')
 
 server.listen(port, function () {
   console.log('Server listening at port %d', port);
@@ -12,6 +13,7 @@ server.listen(port, function () {
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
+app.use(cors())
 app.use(cookieParser());
 app.use('/api/w2v', w2vRouter);
 

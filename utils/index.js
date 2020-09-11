@@ -1,6 +1,6 @@
 var _ = require("lodash");
 var utils = {};
-utils.GOOGLE_BIN = "./GoogleNews-vectors-negative300.bin"
+utils.GOOGLE_BIN = "./GoogleNews-vectors.bin"
 
 utils.sortObject = function (model) {
   return _.chain(model)
